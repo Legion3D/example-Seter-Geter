@@ -1,0 +1,25 @@
+class Dpoint {
+private:
+	int x;
+	int y;
+	int z;
+public:
+	int GetX() {
+		return x;
+	}
+	void SetX(int valueX) {
+		x = valueX;
+	}
+	int GetY() {
+		return y;
+	}
+	void SetY(int valueY) {
+		y = valueY;
+	}
+	int GetZ() {
+		return z;
+	}
+	void SetZ(int valueZ) {
+		z = valueZ;
+	}
+};
