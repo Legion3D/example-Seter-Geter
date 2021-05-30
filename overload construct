@@ -1,0 +1,91 @@
+///Конструктор класса + пекрегрузка
+#include <iostream>
+#include <string>
+using namespace std;
+class Human {
+public:
+	int age = 0;
+	string name = "";
+	int weight = 0;
+	void Print() {
+		cout << "Name-" << name << "\nAge-" << age << "\nWeight-" << weight << endl << endl;
+	}
+};
+class Point {
+private:
+	int z;
+	int x;
+	int y;
+	void Print() {
+		z = x + y;
+		cout << z;
+	}
+
+};
+class Dpoint {
+private:
+	int x;
+	int y;
+	int z;
+public:
+	Dpoint(){
+		x = 0;
+		y = 0;
+		z = 0;
+	}
+	Dpoint(int valueX,int valueY,int valueZ) {
+		x = valueX;
+		y = valueY;
+		z = valueZ;
+	}
+	int GetX() {
+		return x;
+	}
+	void SetX(int valueX) {
+		x = valueX;
+	}
+	int GetY() {
+		return y;
+	}
+	void SetY(int valueY) {
+		y = valueY;
+	}
+	int GetZ() {
+		return z;
+	}
+	void SetZ(int valueZ) {
+		z = valueZ;
+	}
+	void print() {
+		cout << x <<endl;
+		cout << y << endl;
+		cout << z << endl;
+		cout << y + x + z << endl;
+	}
+};
+class CoffeeGrinder {
+private:
+	bool CheckVoltage() {
+		return true;
+	}
+public:
+	void Start() {
+		bool VoltageIsNormal = CheckVoltage();
+		if (VoltageIsNormal == true) {
+
+			cout << "Вжух" << endl;
+		}
+		else {
+			cout << "ЕБЛАН, ВЫРУБАЙ, Я ЩА ВЗОРВУСЬ!!!" << endl;
+		}
+	}
+};
+/// Создал классы
+int main() {
+	setlocale(LC_ALL, "ru");
+	Dpoint a;
+	a.print();
+	Dpoint b(1,22,3);
+	b.print();
+	return 1;
+}
